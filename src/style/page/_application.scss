@@ -1,0 +1,168 @@
+.application-top{
+    .div1{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        background-color: $black-color;
+        color: white;
+        padding: 1em;
+        // height: 10em;
+        h2{
+            width: 35%;
+        }
+    }
+    .div2{
+        padding: 1em;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        border-bottom: 1px solid $black-color;
+        h2{
+            color: #6026BC;
+        }
+    }
+}
+
+.application {
+    padding: 3em;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        div{
+            padding: .5em;
+        }
+        label {
+
+            padding-right: 10vw;
+
+        }
+        input{
+            padding: 1em;
+            border-radius: 10em;
+            border: 0;
+            background-color: #F2F4F8;
+        }
+        .date{
+            label {
+                padding-right: 23vw;
+            }
+        }
+        .name{
+            label {
+                padding-right: 20vw
+            }
+        }
+        .birth{
+            label {
+                padding-right: 14vw
+            }
+        }
+        .address{
+            .home{
+                label{
+                    padding-right: 12vw;
+                }
+            }
+            .items{
+                padding-left: 21vw;
+                label{
+                    padding-right: 2vw;
+                }
+            }
+        }
+        .telephone{
+            label{
+                padding-right: 12vw;
+            }
+        }
+        .cell{
+            .cell{
+                    label{
+                    padding-right: 15vw;
+                }
+            }
+            .email{
+                label{
+                    padding-right: 13vw;
+                }
+            }
+        }
+        .employer{
+            label{
+                padding-right: 18vw;
+            }
+        }
+        .senior{
+            label{
+                padding-right: 5vw;
+            }
+        }
+        .schooling{
+            .year{
+                label{
+                    padding-right: 5vw;
+                }
+            }
+        }
+        .colllege{
+            .year{
+                label{
+                    padding-right: 5vw;
+                }
+            }
+            .major{
+                label{
+                    padding-right: 14vw;
+                }
+            }
+        }
+        .colllege, .schooling{
+            .child{
+                padding-left: 10vw;
+            }
+            label{
+                padding: 0;
+
+            }
+            legend{
+                color: black;
+                padding-right: 10vw;
+            }
+            .radio-group{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+            div{
+                padding:0;
+            }
+        }
+        .class{
+            display: flex;
+            flex-direction: column;
+            .class-div{
+                label{
+                    padding-right: 20vw;                
+                }
+            }
+            .where {
+                label {
+                    padding-right: 14vw;
+                }
+            }
+            .year{
+                label{
+                    padding-right: 21vw;
+                }
+            }
+        }
+        .submit{
+            background-color: $blue-color;
+            color: white;
+            padding: 1em;
+            border-radius: 10em;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.print-container{
+    padding: 5em;
+    .head{
+        font-family: serif;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 1em;
+        font-weight: 600;
+        font-size: 1.3em;
+        line-height: 1.1;
+        h3{
+            font-family: serif;
+        }
+    }
+    p{
+        margin-bottom: 1em;
+    }
+}

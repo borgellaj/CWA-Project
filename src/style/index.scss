@@ -1,1 +1,30 @@
 @import "./reset";
+
+
+// components
+
+@import "./variable/color";
+@import "./layout/layout";
+@import "./header/header";
+@import "./footer/footer";
+
+// page
+
+@import "./page/index";
+@import "./page/program";
+@import "./page/application";
+@import "./page/contact";
+
+// print
+
+@import "./print/print";
+
+html {
+    font-family: "HelveticaNeue", "Helvetica Neue", sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: "HelveticaNeue-Bold", sans-serif;
+    font-weight: 700;
+}
+

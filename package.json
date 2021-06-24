@@ -15,9 +15,13 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.4",
+    "@pittica/gatsby-plugin-recaptcha": "^1.0.1",
+    "formik": "^2.2.9",
     "gatsby": "^3.6.2",
     "gatsby-plugin-image": "^1.7.1",
     "gatsby-plugin-manifest": "^3.7.1",
+    "gatsby-plugin-react-svg": "^3.0.1",
     "gatsby-plugin-sass": "^4.7.1",
     "gatsby-plugin-sharp": "^3.7.1",
     "gatsby-source-filesystem": "^3.7.1",
@@ -25,6 +29,15 @@
     "gatsby-transformer-sharp": "^3.7.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "sass": "^1.35.1"
+    "react-hook-form": "^7.9.0",
+    "react-recaptcha": "^2.3.10",
+    "react-redux": "^7.2.4",
+    "react-to-print": "^2.12.6",
+    "redux": "^4.1.0",
+    "sass": "^1.35.1",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "@types/react-recaptcha": "^2.3.3"
   }
 }

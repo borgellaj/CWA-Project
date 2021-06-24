@@ -1,0 +1,23 @@
+.homefooter{
+    position: absolute;
+}
+.footer{
+    display: flex;
+    background-color: $black-color;
+    color: white;
+    // padding: 1em;
+
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-around;
+
+    ul{
+        padding: 1em;
+    }
+    li{
+        font-size: .7em;
+        margin-bottom: 1em;
+    }
+}
