@@ -126,7 +126,7 @@ class Contact extends React.Component {
                                             <div className="form-group">
                                                 <label>Recaptcha Validation</label>
                                                 <Recaptcha
-                                                    sitekey="6LcyWFYbAAAAAMkJxIy-rL4XJfe1mespf-pltk4O"
+                                                    sitekey="6LfslFYbAAAAALvvAbdBsodshcAdSL9O2UVM6mqd"
                                                     render="explicit"
                                                     theme="light"
                                                     verifyCallback={(response) => { setFieldValue("recaptcha", response); }}
