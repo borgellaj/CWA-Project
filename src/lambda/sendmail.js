@@ -22,7 +22,7 @@ require("dotenv").config({
     let { name, email, message, toEmail } = data
     let mailOptions = {
       from: `${name} <${email}>`,
-      to: toEmail,
+      to: `${toEmail}`,
       replyTo: email,
       text: `${message}`,
     }
