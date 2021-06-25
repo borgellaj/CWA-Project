@@ -19,10 +19,10 @@ require("dotenv").config({
   // Our Netlify function
   export function handler(event, context, callback) {
     let data = JSON.parse(event.body)
-    let { name, email, message } = data
+    let { name, email, message, toEmail } = data
     let mailOptions = {
       from: `${name} <${email}>`,
-      to: process.env.MY_EMAIL_ADDRESS,
+      to: toEmail,
       replyTo: email,
       text: `${message}`,
     }

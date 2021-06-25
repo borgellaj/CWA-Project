@@ -18,7 +18,13 @@ const endpoints = { contact: "/.netlify/functions/sendmail"}
 
 class Contact extends React.Component {
 
-
+    handleSuccess = () => {
+        alert("success")
+      }
+    
+      handleError = msg => {
+        alert("fail")
+      }
     
 
     componentDidMount() {
@@ -50,6 +56,7 @@ class Contact extends React.Component {
                                         email: "",
                                         message:"",
                                         recaptcha: "",
+                                        toEmail: "zulzdn@gmail.com",
                                     }}
                                     onSubmit={async (values) => {
                                         let formData = new FormData();
@@ -57,6 +64,7 @@ class Contact extends React.Component {
                                         formData.append("name", values.name);
                                         formData.append("email", values.email);
                                         formData.append("message", values.message);
+                                        formData.append("toEmail", "zulzdn@gmail.com");
                                        
                                         formData.append("recaptcha", values.recaptcha);
 
@@ -68,9 +76,10 @@ class Contact extends React.Component {
                                         let name = formData.get("name")
                                         let email = formData.get("email")
                                         let message = formData.get("message")
+                                        let toEmail = formData.get("toEmail")
                                         let recaptcha = values.recaptcha
 
-                                        let data = { name, email, message }
+                                        let data = { name, email, message, toEmail }
                                         axios.post(endpoints.contact,data).then(response => {
                                           if (response.status !== 200) {
                                             this.handleError()
