@@ -13,7 +13,14 @@ import Recaptcha from "react-recaptcha";
 import * as yup from 'yup';
 import { Formik } from "formik";
 
+const axios = require("axios")
+const endpoints = { contact: "/.netlify/functions/sendmail"}
+
 class Contact extends React.Component {
+
+
+    
+
     componentDidMount() {
         const script = document.createElement("script");
         script.src =
@@ -41,6 +48,7 @@ class Contact extends React.Component {
                                     initialValues={{
                                         name: "",
                                         email: "",
+                                        message:"",
                                         recaptcha: "",
                                     }}
                                     onSubmit={async (values) => {
@@ -48,6 +56,7 @@ class Contact extends React.Component {
 
                                         formData.append("name", values.name);
                                         formData.append("email", values.email);
+                                        formData.append("message", values.message);
                                        
                                         formData.append("recaptcha", values.recaptcha);
 
@@ -55,14 +64,34 @@ class Contact extends React.Component {
                                         // const res = await fetch("posturl", { method: "POST", body: formData });
                                         // Do whatever on the sever
                                         // alert("Form submitted!");
-                                        console.log(formData.get("name"));
-                                        console.log(formData.get("email"));
-                                        console.log(formData.get("photo"));
-                                        console.log(formData.get("recaptcha"));
+                                        // let { name, email, message } = this.state
+                                        let name = formData.get("name")
+                                        let email = formData.get("email")
+                                        let message = formData.get("message")
+                                        let recaptcha = values.recaptcha
+
+                                        let data = { name, email, message }
+                                        axios.post(endpoints.contact,data).then(response => {
+                                          if (response.status !== 200) {
+                                            this.handleError()
+                                          } else {
+                                            this.handleSuccess()
+                                          }
+                                        })
+
+                                        // console.log(formData.getAll())
+                                        
+                                        console.log(data)
+                                        
+                                        // console.log(formData.get("name"));
+                                        // console.log(formData.get("email"));
+                                        // console.log(formData.get("photo"));
+                                        // console.log(formData.get("recaptcha"));
                                     }}
                                     validationSchema={yup.object().shape({
                                         name: yup.string().required(),
                                         email: yup.string().email().required(),
+                                        // message: yup.string().message(),
                                         recaptcha: yup.string().required(),
                                     })}
                                     render={({ values, errors, touched, handleSubmit, handleChange, setFieldValue }) => (
@@ -112,21 +141,6 @@ class Contact extends React.Component {
                                             <button type="submit" className="submit">submit</button>
                                         </form>
                                     )} />
-                                {/* <form action="post">
-                                <div>
-                                    <input type="text" name="name" id="name" placeholder="Name" />
-                                    <input type="email" name="email" id="email" placeholder="Email Address" />
-                                </div>
-                                <textarea name="message" id="message" placeholder="Write your message here"/>
-                                <Recaptcha
-                                    sitekey="6Le2nREUAAAAALYuOv7X9Fe3ysDmOmghtj0dbCKW"
-                                    render="explicit"
-                                    theme="dark"
-                                    // verifyCallback={(response) => { setFieldValue("recaptcha", response); }}
-                                    // onloadCallback={() => { console.log("done loading!"); }}
-                                />
-                                <input type="submit" value="Send" className="submit"/>
-                            </form> */}
                             </div>
                             <div className="right">
 
