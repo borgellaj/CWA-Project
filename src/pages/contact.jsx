@@ -95,7 +95,7 @@ class Contact extends React.Component {
                                         recaptcha: yup.string().required(),
                                     })}
                                     render={({ values, errors, touched, handleSubmit, handleChange, setFieldValue }) => (
-                                        <form onSubmit={handleSubmit}>
+                                        <form onSubmit={handleSubmit} data-netlify={true}>
                                             <div className="form-group">
                                                 <input id="name" name="name" type="text" 
                                                 placeholder="Name"
@@ -126,7 +126,7 @@ class Contact extends React.Component {
                                             <div className="form-group">
                                                 <label>Recaptcha Validation</label>
                                                 <Recaptcha
-                                                    sitekey="6Le2nREUAAAAALYuOv7X9Fe3ysDmOmghtj0dbCKW"
+                                                    sitekey="6LcyWFYbAAAAAMkJxIy-rL4XJfe1mespf-pltk4O"
                                                     render="explicit"
                                                     theme="light"
                                                     verifyCallback={(response) => { setFieldValue("recaptcha", response); }}
