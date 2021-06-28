@@ -33,9 +33,9 @@ const Program = (location) => {
                     <br />
                     <ol>
                         <li>OSHA-30</li>
-                        <li>Lock Out/Tag Out (cer)</li>
+                        <li>Lock Out/Tag Out (certification)</li>
                         <li>Confined Space</li>
-                        <li>First Aid/ CPR (Red Cross</li>
+                        <li>First Aid/ CPR (Red Cross)</li>
                         <li>General</li>
                         <li>Structured Cabling (Placing, Pulling and terminating UTP Cabling)</li>
                         <li>Color Codes</li>
@@ -46,7 +46,7 @@ const Program = (location) => {
                         <li>Paging Systems</li>
                         <li>Closed Antenna Systems</li>
                         <li>Distributed Antenna Systems</li>
-                        <li>Computer Literac</li>
+                        <li>Computer Literacy</li>
                         <li>Computer Networking</li>
                         <li>Network Video/Closed Circuit Television</li>
                         <li>Intrusion Systems</li>
