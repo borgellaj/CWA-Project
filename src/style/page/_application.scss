@@ -8,7 +8,7 @@
         padding: 1em;
         // height: 10em;
         h2{
-            width: 35%;
+            // width: 35%;
         }
     }
     .div2{
@@ -24,7 +24,7 @@
 }
 
 .application {
-    padding: 3em;
+    padding: 3em 0em;
 
     form {
         display: flex;
@@ -164,5 +164,18 @@
             border-radius: 10em;
             cursor: pointer;
         }
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .application-top{
+        .div1{
+            h2{
+                width: 35%;
+            }
+        }
+    }
+    .application {
+        padding: 3em;
     }
 }

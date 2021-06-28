@@ -6,6 +6,8 @@ import store from '../components/etc/store';
 import Card from '../components/etc/form'
 import Layout from '../components/layout';
 
+
+
 const Application = (location) => {
         // console.log(this.props.location)
 

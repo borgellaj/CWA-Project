@@ -36,6 +36,7 @@ export default class CardPrint extends Component {
             Class,
             whereTaken,
             yearTaken,
+            certification,
 
         } = this.props
         return (
@@ -48,12 +49,12 @@ export default class CardPrint extends Component {
 
                 <p><span>Occupational Title:  Communications Technician</span></p>
                 <p><span></span></p>
-                <p><span>Date:{date}</span></p>
+                <p><span>Date: {date} </span></p>
                 <p><span></span></p>
                 <p><span>Name: {name} </span></p>
                 {/* <p><span >First</span><span >Middle</span><span >Last</span></p> */}
                 <p><span></span></p>
-                <p><span>Date of Birth: {DateofBirth}</span>
+                <p><span>Date of Birth: {DateofBirth} </span>
                 <span>
                     Male : {(() => {
                             switch (male) {
@@ -69,9 +70,9 @@ export default class CardPrint extends Component {
                         })()} 
                 </span></p>
                 <p><span></span></p>
-                <p><span>Home Address:{HomeAddress}Apt. #:{Apt}</span></p>
+                <p><span>Home Address:{HomeAddress}Apt. #:{Apt} </span></p>
                 <p><span></span></p>
-                <p><span>City: {City}</span><span>Zip: {Zip}</span></p>
+                <p><span>City: {City} </span><span>Zip: {Zip} </span></p>
                 <p><span></span></p>
                 <p><span>Home Telephone: {HomeTelephone} Work Telephone: {WorkTelephone}</span></p>
                 <p><span></span></p>
@@ -79,17 +80,15 @@ export default class CardPrint extends Component {
                 <p><span></span></p>
                 <p><span>Employer: {Employer} </span><span> Date started {Datestarted}</span></p>
                 <p><span></span></p>
-                <p><span>Schooling: highest level completed GED {Schooling}  Year graduated {yearGraduated1}</span></p>
+                <p><span>Schooling: highest level completed GED {Schooling}  Year graduated {yearGraduated1} </span></p>
                 <p><span></span></p>
-                <p><span>College completed: {CollegeCompleted} Major : {Major} Year graduated : {yearGraduated2}</span></p>
+                <p><span>College completed: {CollegeCompleted} Major : {Major} Year graduated : {yearGraduated2} </span></p>
                 <p><span></span></p>
                 <p><span></span></p>
                 <p><span>Vocational training: (night classes, trade, military, etc.) Use back if necessary</span></p>
                 <p><span></span></p>
                 <p><span>Class: {Class} where taken : {whereTaken} year : {whereTaken}</span></p>
-                {/* <p><span>Class:___________________________________ where taken______________ year______</span></p>
-                <p><span></span></p> */}
-                <p><span>Certifications, if any (FCC Radio License, Novell, CCNA, BICSI, etc.):</span></p>
+                <p><span>Certifications, if any (FCC Radio License, Novell, CCNA, BICSI, etc.): {certification} </span></p>
             </div>
         )
     }

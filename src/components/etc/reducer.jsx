@@ -51,6 +51,7 @@ const initialState = {
             Class: action.payload.Class,
             whereTaken: action.payload.whereTaken,
             yearTaken: action.payload.yearTaken,
+            certification: action.payload.certification,
             recaptcha: action.payload.recaptcha,
 
         }

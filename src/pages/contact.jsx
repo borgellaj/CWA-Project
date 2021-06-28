@@ -56,7 +56,7 @@ class Contact extends React.Component {
                                         email: "",
                                         message:"",
                                         recaptcha: "",
-                                        toEmail: "zulzdn@gmail.com",
+                                        toEmail: "info@codescholarly.com",
                                     }}
                                     onSubmit={async (values) => {
                                         let formData = new FormData();
@@ -64,7 +64,7 @@ class Contact extends React.Component {
                                         formData.append("name", values.name);
                                         formData.append("email", values.email);
                                         formData.append("message", values.message);
-                                        formData.append("toEmail", "zulzdn@gmail.com");
+                                        formData.append("toEmail", "info@codescholarly.com");
                                        
                                         formData.append("recaptcha", values.recaptcha);
 
@@ -90,7 +90,7 @@ class Contact extends React.Component {
 
                                         // console.log(formData.getAll())
                                         
-                                        console.log(data)
+                                        // console.log(data)
                                         
                                         // console.log(formData.get("name"));
                                         // console.log(formData.get("email"));

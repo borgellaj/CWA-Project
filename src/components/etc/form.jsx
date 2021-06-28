@@ -18,6 +18,10 @@ import SelectWrapper from '../form-ui/Select';
 // import ReCaptcha, { Loader } from "@pittica/gatsby-plugin-recaptcha"
 import * as yup from 'yup';
 import Recaptcha from "react-recaptcha";
+
+
+const axios = require("axios")
+const endpoints = { contact: "/.netlify/functions/sendpdf" }
 class Card extends Component {
     constructor(props, context) {
         super(props);
@@ -32,14 +36,24 @@ class Card extends Component {
     //         recaptcha: yup.string().required(),})
     // }
 
+    handleSuccess = () => {
+        alert("success")
+    }
+
+    handleError = () => {
+        alert("fail")
+    }
+
     componentDidMount() {
         const script = document.createElement("script");
         script.src =
-          "https://www.google.com/recaptcha/api.js";
+            "https://www.google.com/recaptcha/api.js";
         script.async = true;
         script.defer = true;
         document.body.appendChild(script);
-      }
+    }
+
+
 
 
     render() {
@@ -67,6 +81,7 @@ class Card extends Component {
             whereTaken,
             yearTaken,
             submitAction,
+            certification,
             recaptcha, } = this.props
 
         return (
@@ -95,6 +110,7 @@ class Card extends Component {
                         whereTaken={whereTaken}
                         yearTaken={yearTaken}
                         DateofBirth={DateofBirth}
+                        certification={certification}
                         ref={el => (this.componentRef = el)} /></div>
                 <div>
 
@@ -122,23 +138,47 @@ class Card extends Component {
                             Class: '',
                             whereTaken: '',
                             yearTaken: '',
+                            certification: '',
                             recaptcha: "",
+                            toEmail: "info@codescholarly.com",
                         }}
                         onSubmit={fields => {
                             // console.log(fields)
                             let formData = new FormData();
+                            formData.append("recaptcha", fields.recaptcha);
+
                             submitAction(fields)
 
-                            formData.append("recaptcha", fields.recaptcha);
+
+                            // let recaptcha = values.recaptcha
+                            let name = fields.name
+                            let email = fields.EmailAddress
+                            let message = fields
+                            let toEmail = fields.toEmail
+
+                            let data = { name, email, message, toEmail }
+                            axios.post(endpoints.contact, data).then(response => {
+                                if (response.status !== 200) {
+                                    this.handleError()
+                                } else {
+                                    this.handleSuccess()
+                                }
+                            })
+
+
+                            // console.log(fields)
+                            // console.log(fields.name)
                         }}
-                        // validationSchema={yup.object().shape({
-                        //     name: yup.string().required(),
-                        //     email: yup.string().email().required(),
-                        //     // recaptcha: yup.string().required(),
-                        //   })}
-                        
+                        validationSchema={yup.object().shape({
+                            name: yup.string().required(),
+                            // email: yup.string().email().required(),
+                            recaptcha: yup.string().required(),
+                          })}
+
                         render={({ errors, status, touched, setFieldValue, }) => (
-                            <Form>
+                            <Form style={{
+                                overflowX: "hidden",
+                            }}>
                                 <main className="application">
                                     <Grid container spacing={2} justify="center" alignItems="center">
                                         {/* <div className="date">
@@ -183,7 +223,7 @@ class Card extends Component {
                                                 />
                                             </Grid>
                                         </Grid>
-                                        
+
                                         <Grid container item spacing={2} xs={12} justify="center" alignItems="center">
                                             <Grid item xs={10}>
                                                 <Typography>
@@ -215,13 +255,13 @@ class Card extends Component {
                                                 />
                                             </Grid>
                                         </Grid>
-                                        
+
                                         <Grid container spacing={2} item xs={12} justify="center" alignItems="center">
-                                        <Grid item xs={10}>
-                                            <Typography>
-                                                Telephone
-                                            </Typography>
-                                        </Grid>
+                                            <Grid item xs={10}>
+                                                <Typography>
+                                                    Telephone
+                                                </Typography>
+                                            </Grid>
                                             <Grid item xs={10}>
                                                 <TextfieldWrapper
                                                     name="HomeTelephone"
@@ -247,13 +287,13 @@ class Card extends Component {
                                                 />
                                             </Grid>
                                         </Grid>
-                                       
+
                                         <Grid container item spacing={2} xs={12} justify="center" alignItems="center">
-                                        <Grid item xs={10}>
-                                            <Typography>
-                                                Past Employment
-                                            </Typography>
-                                        </Grid>
+                                            <Grid item xs={10}>
+                                                <Typography>
+                                                    Past Employment
+                                                </Typography>
+                                            </Grid>
                                             <Grid item xs={10}>
                                                 <TextfieldWrapper
                                                     name="Employer"
@@ -262,53 +302,53 @@ class Card extends Component {
                                             </Grid>
                                             <Grid item xs={10}>
                                                 <DateTimePicker
-                                                    name="DateStarted"
+                                                    name="Datestarted"
                                                     label="Date started"
                                                 />
                                             </Grid>
                                         </Grid>
-                                        
+
                                         <Grid container item spacing={2} xs={12} justify="center" alignItems="center">
-                                        <Grid item xs={10}>
-                                            <Typography>
-                                                School
-                                            </Typography>
-                                        </Grid>
+                                            <Grid item xs={10}>
+                                                <Typography>
+                                                    School
+                                                </Typography>
+                                            </Grid>
                                             <Grid item xs={10}>
                                                 <SelectWrapper
                                                     name="Schooling"
                                                     label="Schooling"
                                                     options={{
-                                                        9:"9",
-                                                        10:"10",
-                                                        11:"11",
-                                                        12:"12"
+                                                        9: "9",
+                                                        10: "10",
+                                                        11: "11",
+                                                        12: "12"
                                                     }}
                                                 />
                                             </Grid>
                                             <Grid item xs={10}>
                                                 <DateTimePicker
-                                                    name="yeargraduated1"
+                                                    name="yearGraduated1"
                                                     label="Year Graduated"
                                                 />
                                             </Grid>
                                         </Grid>
-                                       
+
                                         <Grid container spacing={2} item xs={12} justify="center" alignItems="center">
-                                        <Grid item xs={10}>
-                                            <Typography>
-                                                College
-                                            </Typography>
-                                        </Grid>
+                                            <Grid item xs={10}>
+                                                <Typography>
+                                                    College
+                                                </Typography>
+                                            </Grid>
                                             <Grid item xs={10}>
                                                 <SelectWrapper
                                                     name="CollegeCompleted"
                                                     label="College Completed"
                                                     options={{
-                                                        13:"13",
-                                                        14:"14",
-                                                        15:"15",
-                                                        16:"16"
+                                                        13: "13",
+                                                        14: "14",
+                                                        15: "15",
+                                                        16: "16"
                                                     }}
                                                 />
                                             </Grid>
@@ -320,18 +360,18 @@ class Card extends Component {
                                             </Grid>
                                             <Grid item xs={10}>
                                                 <DateTimePicker
-                                                    name="yeargraduated2"
+                                                    name="yearGraduated2"
                                                     label="Year Graduated"
                                                 />
                                             </Grid>
                                         </Grid>
-                                        
+
                                         <Grid container spacing={2} item xs={12} justify="center" alignItems="center">
-                                        <Grid item xs={10}>
-                                            <Typography>
-                                                Vocational training: (night classes, trade, military, etc.) Use back if necessary
-                                            </Typography>
-                                        </Grid>
+                                            <Grid item xs={10}>
+                                                <Typography>
+                                                    Vocational training: (night classes, trade, military, etc.) Use back if necessary
+                                                </Typography>
+                                            </Grid>
                                             <Grid item xs={10}>
                                                 <TextfieldWrapper
                                                     name="Class"
@@ -351,16 +391,22 @@ class Card extends Component {
                                                 />
                                             </Grid>
                                         </Grid>
-                                        
+
                                         <Grid container item xs={10} spacing={2} justify="center" alignItems="center">
-                                        <Grid item xs={12}>
-                                            <Typography>
-                                                Certifications, if any (FCC Radio License, Novell, CCNA, BICSI, etc.):
-                                            </Typography>
-                                        </Grid>
-                                            <Grid item  xs={6} style={{textAlign:"-webkit-center"}}>
+                                                <Grid item xs={12}>
+                                                    <Typography>
+                                                        Certifications, if any (FCC Radio License, Novell, CCNA, BICSI, etc.):
+                                                    </Typography>
+                                                </Grid>
+                                                <Grid item xs={12}>
+                                                    <TextfieldWrapper
+                                                        name="certification"
+                                                        label="Certifications"
+                                                    />
+                                                </Grid>
+                                            <Grid item style={{ textAlign: "-webkit-center" }}>
                                                 <Recaptcha
-                                                    sitekey="6Le2nREUAAAAALYuOv7X9Fe3ysDmOmghtj0dbCKW"
+                                                    sitekey="6LfslFYbAAAAALvvAbdBsodshcAdSL9O2UVM6mqd"
                                                     render="explicit"
                                                     theme="light"
                                                     verifyCallback={(response) => { setFieldValue("recaptcha", response); }}
@@ -372,20 +418,20 @@ class Card extends Component {
                                                     )}
                                             </Grid>
                                             <Grid container item xs={10} spacing={2}>
-                                            <Grid item xs={6}>
-                                                <ButtonWrapper>
-                                                    Submit Form
-                                                </ButtonWrapper>
-                                            </Grid>
-                                            <Grid item xs={6}>
-                                                <ReactToPrint
-                                                    trigger={() => <Button variant='contained'
-                                                        color='primary'
-                                                        fullWidth={true}
-                                                    >Print</Button>}
-                                                    content={() => this.componentRef}
-                                                />
-                                            </Grid>
+                                                <Grid item xs={6}>
+                                                    <ButtonWrapper>
+                                                        Submit Form
+                                                    </ButtonWrapper>
+                                                </Grid>
+                                                <Grid item xs={6}>
+                                                    <ReactToPrint
+                                                        trigger={() => <Button variant='contained'
+                                                            color='primary'
+                                                            fullWidth={true}
+                                                        >Print</Button>}
+                                                        content={() => this.componentRef}
+                                                    />
+                                                </Grid>
                                             </Grid>
 
                                         </Grid>
@@ -422,6 +468,7 @@ const mapStateToProps = (state) => ({
     Class: state.Class,
     whereTaken: state.whereTaken,
     yearTaken: state.yearTaken,
+    certification: state.certification,
 
 });
 

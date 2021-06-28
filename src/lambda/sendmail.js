@@ -31,13 +31,13 @@ require("dotenv").config({
     mg.messages().send(mailOptions, function(error, body) {
       if (error) {
         callback(null, {
-          errorCode,
+          statusCode: errorCode,
           headers,
           body: JSON.stringify(error),
         })
       } else {
         callback(null, {
-          successCode,
+          statusCode: successCode,
           headers,
           body: JSON.stringify(body),
         })
