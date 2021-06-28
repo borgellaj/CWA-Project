@@ -291,7 +291,7 @@ class Card extends Component {
                                         <Grid container item spacing={2} xs={12} justify="center" alignItems="center">
                                             <Grid item xs={10}>
                                                 <Typography>
-                                                    Past Employment
+                                                    Current Employment
                                                 </Typography>
                                             </Grid>
                                             <Grid item xs={10}>
