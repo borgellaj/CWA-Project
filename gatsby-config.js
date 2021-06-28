@@ -11,8 +11,8 @@ module.exports = {
     app.use(
       "/.netlify/functions/",
       createProxyMiddleware({
-        // target: "http://localhost:9000",
-        target: "http://localhost:8888",
+        target: "http://localhost:9000",
+        // target: "http://localhost:8888",
         pathRewrite: {
           "/.netlify/functions/": "",
         },
