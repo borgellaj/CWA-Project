@@ -140,7 +140,7 @@ class Card extends Component {
                             yearTaken: '',
                             certification: '',
                             recaptcha: "",
-                            toEmail: "info@codescholarly.com",
+                            toEmail: `${process.env.GATSBY_EMAILTO}`,
                         }}
                         onSubmit={fields => {
                             // console.log(fields)
