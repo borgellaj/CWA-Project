@@ -1,5 +1,6 @@
 import { Link } from "gatsby"
 import * as React from "react"
+import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 
@@ -13,9 +14,12 @@ const IndexPage = (location) => {
           (FOA) School offering Cabling and Fiber Optic classes
           designed for individual groups
         </div>
-         <div className="link-container">
-           <Link className="link" to="/program" > More Information </Link>
-          </div>
+
+        <div className="link-container">
+          <Link className="link" to="/program" > More Information </Link>
+        </div>
+        <br />
+        <StaticImage src="../images/png/team.jpeg" alt="the team" />
       </main>
     </Layout>
   )
