@@ -393,18 +393,7 @@ class Card extends Component {
                                             </Grid>
                                         </Grid>
 
-                                        <Grid container item xs={10} spacing={2} justify="center" alignItems="center">
-                                                <Grid item xs={12}>
-                                                    <Typography>
-                                                        Certifications, if any (FCC Radio License, Novell, CCNA, BICSI, etc.):
-                                                    </Typography>
-                                                </Grid>
-                                                <Grid item xs={12}>
-                                                    <TextfieldWrapper
-                                                        name="certification"
-                                                        label="Certifications"
-                                                    />
-                                                </Grid>
+                                        
                                             <Grid item style={{ textAlign: "-webkit-center" }}>
                                                 <Recaptcha
                                                     sitekey="6LfslFYbAAAAALvvAbdBsodshcAdSL9O2UVM6mqd"
