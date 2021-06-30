@@ -322,7 +322,8 @@ class Card extends Component {
                                                         9: "9",
                                                         10: "10",
                                                         11: "11",
-                                                        12: "12"
+                                                        12: "12",
+                                                        GED: "GED"
                                                         
                                                     }}
                                                 />
