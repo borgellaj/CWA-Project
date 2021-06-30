@@ -81,7 +81,7 @@ class Card extends Component {
             whereTaken,
             yearTaken,
             submitAction,
-            certification,
+           
             recaptcha, } = this.props
 
         return (
@@ -138,7 +138,7 @@ class Card extends Component {
                             Class: '',
                             whereTaken: '',
                             yearTaken: '',
-                            certification: '',
+                           
                             recaptcha: "",
                             toEmail: `${process.env.GATSBY_EMAILTO}`,
                         }}
@@ -458,7 +458,7 @@ const mapStateToProps = (state) => ({
     Class: state.Class,
     whereTaken: state.whereTaken,
     yearTaken: state.yearTaken,
-    certification: state.certification,
+    
 
 });
 
