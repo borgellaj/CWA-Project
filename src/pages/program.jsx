@@ -38,7 +38,7 @@ const Program = (location) => {
                     <ol>
                         <li>OSHA-30 (Cert.)</li>
                         <li>Lock Out/Tag Out (Cert.)</li>
-                        <li>Confined Space(Cert.)</li>
+                        <li>Confined Space (Cert.)</li>
                         <li>First Aid/ CPR (Red Cross)</li>
                         <li>General Safety</li>
                         <li>Structured Cabling (Placing, Pulling and terminating UTP Cabling)</li>
@@ -48,11 +48,11 @@ const Program = (location) => {
                         <li>National Electrical Code</li>
                         <li>Fire Stopping</li>
                         <li>Paging Systems</li>
-                        <li>Closed Antenna Systems(CATV)</li>
-                        <li>Distributed Antenna Systems(DAS)</li>
+                        <li>Closed Antenna Systems (CATV)</li>
+                        <li>Distributed Antenna Systems (DAS)</li>
                         <li>Computer Literacy</li>
                         <li>Computer Networking</li>
-                        <li>Network Video/Closed Circuit Television(CCTV)</li>
+                        <li>Network Video/Closed Circuit Television (CCTV)</li>
                         <li>Intrusion Systems</li>
                         <li>Access Control Systems</li>
                         <li> Blueprint Reading</li>
