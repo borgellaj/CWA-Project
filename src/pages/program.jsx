@@ -36,11 +36,11 @@ const Program = (location) => {
                     <h2>PROGRAM CONSIST OF THE FOLLOWING AND SKILLS</h2>
                     <br />
                     <ol>
-                        <li>OSHA-30</li>
-                        <li>Lock Out/Tag Out (Certification)</li>
-                        <li>Confined Space</li>
+                        <li>OSHA-30 (Cert.)</li>
+                        <li>Lock Out/Tag Out (Cert.)</li>
+                        <li>Confined Space(Cert.)</li>
                         <li>First Aid/ CPR (Red Cross)</li>
-                        <li>General</li>
+                        <li>General Safety</li>
                         <li>Structured Cabling (Placing, Pulling and terminating UTP Cabling)</li>
                         <li>Color Codes</li>
                         <li>TIA/EIA</li>
@@ -48,15 +48,16 @@ const Program = (location) => {
                         <li>National Electrical Code</li>
                         <li>Fire Stopping</li>
                         <li>Paging Systems</li>
-                        <li>Closed Antenna Systems</li>
-                        <li>Distributed Antenna Systems</li>
+                        <li>Closed Antenna Systems(CATV)</li>
+                        <li>Distributed Antenna Systems(DAS)</li>
                         <li>Computer Literacy</li>
                         <li>Computer Networking</li>
-                        <li>Network Video/Closed Circuit Television</li>
+                        <li>Network Video/Closed Circuit Television(CCTV)</li>
                         <li>Intrusion Systems</li>
                         <li>Access Control Systems</li>
                         <li> Blueprint Reading</li>
-                        <li>Audio</li>
+                        <li>Audio Visual</li>
+                        <li>Grounding and Bonding</li>
                     </ol>
                     <div className="logo-container">
                         <Both className="logo" />
