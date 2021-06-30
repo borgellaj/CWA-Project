@@ -391,7 +391,7 @@ class Card extends Component {
                                                     label="Year Taken"
                                                 />
                                             </Grid>
-                                        </Grid>
+                                      
 
                                         
                                             <Grid item style={{ textAlign: "-webkit-center" }}>
