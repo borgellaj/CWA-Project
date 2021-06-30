@@ -110,7 +110,7 @@ class Card extends Component {
                         whereTaken={whereTaken}
                         yearTaken={yearTaken}
                         DateofBirth={DateofBirth}
-                        certification={certification}
+                        
                         ref={el => (this.componentRef = el)} /></div>
                 <div>
 
