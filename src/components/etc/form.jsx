@@ -291,7 +291,7 @@ class Card extends Component {
                                         <Grid container item spacing={2} xs={12} justify="center" alignItems="center">
                                             <Grid item xs={10}>
                                                 <Typography>
-                                                    Current Employment
+                                                    Employed by
                                                 </Typography>
                                             </Grid>
                                             <Grid item xs={10}>
@@ -322,14 +322,15 @@ class Card extends Component {
                                                         9: "9",
                                                         10: "10",
                                                         11: "11",
-                                                        12: "12"
+                                                        12: "12",
+                                                        GED: "GED"
                                                     }}
                                                 />
                                             </Grid>
                                             <Grid item xs={10}>
                                                 <DateTimePicker
                                                     name="yearGraduated1"
-                                                    label="Year Graduated"
+                                                    label="Year Graduated or GED"
                                                 />
                                             </Grid>
                                         </Grid>
