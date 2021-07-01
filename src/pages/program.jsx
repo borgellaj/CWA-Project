@@ -32,7 +32,7 @@ const Program = (location) => {
                         applications under the supervision of skilled workers.
                     </p>
                     <br />
-                            <p>Classes are currently taught at our partner site Chabot College in Hayward, Ca.</p>
+                            <p>The Apprenticeship Program is offered to CWA members employed by employers participating in the CWA Apprenticeship Program.</p>
                     <br />
                     
                     <h2>PROGRAM CONSIST OF THE FOLLOWING AND SKILLS</h2>
