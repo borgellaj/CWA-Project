@@ -21,7 +21,7 @@ require("dotenv").config({
     let data = JSON.parse(event.body)
     let { name, email, message, toEmail } = data
     let mailOptions = {
-      from: `${name} <${email}>`,
+      from: `${name} | ${email} <cwajatc@gmail.com>`,
       to: `${toEmail}`,
       replyTo: email,
       subject: 'cwa-jatc applicant',

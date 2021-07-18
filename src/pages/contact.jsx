@@ -80,22 +80,21 @@ class Contact extends React.Component {
                                         let recaptcha = values.recaptcha
 
                                         let data = { name, email, message, toEmail }
-                                        axios.post(endpoints.contact,data).then(response => {
-                                          if (response.status !== 200) {
-                                            this.handleError()
-                                          } else {
-                                            this.handleSuccess()
-                                          }
+                                        console.log(data)
+
+                                        axios.post(endpoints.contact, data)
+                                        .then(response => {
+                                            if (response.status !== 200) {
+                                                this.handleError()
+                                            } else {
+                                                this.handleSuccess()
+                                            }
+                                        }).then(response => {
+                                            axios.post("https://sheet.best/api/sheets/3fc859a7-e019-42f2-8088-8e94e1172d2f", data)
+                                            
                                         })
 
-                                        // console.log(formData.getAll())
                                         
-                                        // console.log(data)
-                                        
-                                        // console.log(formData.get("name"));
-                                        // console.log(formData.get("email"));
-                                        // console.log(formData.get("photo"));
-                                        // console.log(formData.get("recaptcha"));
                                     }}
                                     validationSchema={yup.object().shape({
                                         name: yup.string().required(),

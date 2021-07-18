@@ -163,7 +163,11 @@ class Card extends Component {
                                 } else {
                                     this.handleSuccess()
                                 }
+                            }).then(response=>{
+                                // axios.post("https://sheet.best/api/sheets/56f05286-9219-4c05-9806-134b07cbe70b", data)
                             })
+
+                            console.log(data)
 
 
                             // console.log(fields)
