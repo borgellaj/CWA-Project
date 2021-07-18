@@ -81,7 +81,7 @@ class Card extends Component {
             whereTaken,
             yearTaken,
             submitAction,
-            certification,
+           
             recaptcha, } = this.props
 
         return (
@@ -110,7 +110,7 @@ class Card extends Component {
                         whereTaken={whereTaken}
                         yearTaken={yearTaken}
                         DateofBirth={DateofBirth}
-                        certification={certification}
+                        
                         ref={el => (this.componentRef = el)} /></div>
                 <div>
 
@@ -138,7 +138,7 @@ class Card extends Component {
                             Class: '',
                             whereTaken: '',
                             yearTaken: '',
-                            certification: '',
+                           
                             recaptcha: "",
                             toEmail: `${process.env.GATSBY_EMAILTO}`,
                         }}
@@ -295,7 +295,7 @@ class Card extends Component {
                                         <Grid container item spacing={2} xs={12} justify="center" alignItems="center">
                                             <Grid item xs={10}>
                                                 <Typography>
-                                                    Current Employment
+                                                    Employed by
                                                 </Typography>
                                             </Grid>
                                             <Grid item xs={10}>
@@ -326,14 +326,16 @@ class Card extends Component {
                                                         9: "9",
                                                         10: "10",
                                                         11: "11",
-                                                        12: "12"
+                                                        12: "12",
+                                                        GED: "GED"
+                                                        
                                                     }}
                                                 />
                                             </Grid>
                                             <Grid item xs={10}>
                                                 <DateTimePicker
                                                     name="yearGraduated1"
-                                                    label="Year Graduated"
+                                                    label="Year Graduated or GED"
                                                 />
                                             </Grid>
                                         </Grid>
@@ -394,20 +396,9 @@ class Card extends Component {
                                                     label="Year Taken"
                                                 />
                                             </Grid>
-                                        </Grid>
+                                      
 
-                                        <Grid container item xs={10} spacing={2} justify="center" alignItems="center">
-                                                <Grid item xs={12}>
-                                                    <Typography>
-                                                        Certifications, if any (FCC Radio License, Novell, CCNA, BICSI, etc.):
-                                                    </Typography>
-                                                </Grid>
-                                                <Grid item xs={12}>
-                                                    <TextfieldWrapper
-                                                        name="certification"
-                                                        label="Certifications"
-                                                    />
-                                                </Grid>
+                                        
                                             <Grid item style={{ textAlign: "-webkit-center" }}>
                                                 <Recaptcha
                                                     sitekey="6LfslFYbAAAAALvvAbdBsodshcAdSL9O2UVM6mqd"
@@ -472,7 +463,7 @@ const mapStateToProps = (state) => ({
     Class: state.Class,
     whereTaken: state.whereTaken,
     yearTaken: state.yearTaken,
-    certification: state.certification,
+    
 
 });
 

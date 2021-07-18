@@ -18,7 +18,7 @@ const Header = (location) => {
       </ul>
       <div className="bottom-header">
         <div> <Link to="/" ><Both className="logo-both" /></Link> </div>
-        <h2>CWA DISTRICT NINE TELECOMUNICATIONS APPRENTICESHIP PROGRAM</h2>
+        <h2>CWA DISTRICT NINE TELECOMMUNICATIONS APPRENTICESHIP PROGRAM</h2>
         <div className="background-image">  <StaticImage src="../images/png/bg.png" alt="background-image" className="img" />
         </div>
       </div>
