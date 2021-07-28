@@ -41,9 +41,9 @@ const Program = (location) => {
                                       <p>The Course provides a thorough overview of networking basics:  MAC and IP addressing, hubs, and switches, packets and ports, and OSI versus TCP/IP models, cabling.  Topologies and Ethernet basics, basics of TCP/IP and an overview of routing, major TCP/IP applications, http, https protocols, ports and network naming conventions.  This course also discusses VLAN, VPNs, IPv6 and remote connectivity.  Using wired (Ethernet) and wireless (Wi-Fi) methods to connect the computers and equipment in a network.  Sharing files between computers and explaining how to manage connections to those services with DHCP and DNS addressing.  Setting up an internet connection and configuring security and local-storage options for the network.</p>
 <br>
                                         <p>Apprenticeship Term: 36 months</p>
-<p>6 courses (no particular sequence)</p>
-<p>Semester basis (1 course per semester)</p>
-<p>Each course is approximately 54 hours (108 hours per year)</p>
+                                        <p>6 courses (no particular sequence)</p>
+                                        <p>Semester basis (1 course per semester)</p>
+                                        <p>Each course is approximately 54 hours (108 hours per year)</p>
                         <div className="application" ><Link to="/application" > Application</Link></div>
                     </div>
 
