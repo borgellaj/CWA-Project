@@ -14,6 +14,7 @@ const Header = (location) => {
         }}><Link to="/" activeClassName="active"  >CWA-JATC</Link></li>
         <li><Link to="/program" activeClassName="active" >ABOUT</Link></li>
         <li><Link to="/contact" activeClassName="active">CONTACT</Link></li>
+          <li><Link to="/description" activeClassName="active">PROGRAM DESCRIPTION</Link></li>
         <li><Link to="/application" activeClassName="active" >APPLICATION</Link></li>
       </ul>
       <div className="bottom-header">
