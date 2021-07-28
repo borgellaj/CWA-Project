@@ -3,7 +3,7 @@ import React from 'react'
 
 import Layout from "../components/layout"
 import Both from "../images/svg/both.svg"
-const Program = (location) => {
+const Description  = (location) => {
     return (
         <Layout location={location}>
 
@@ -54,4 +54,4 @@ const Program = (location) => {
     )
 }
 
-export default Program
+export default Description 
