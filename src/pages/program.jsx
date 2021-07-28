@@ -61,8 +61,6 @@ const Program = (location) => {
                         <li>Audio Visual</li>
                         <li>Grounding and Bonding</li>
                     </ol>
-                    <div className="logo-container">
-                        <Both className="logo" />
                         <div className="application" ><Link to="/application" > Application</Link></div>
                     </div>
 
