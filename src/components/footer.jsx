@@ -7,7 +7,7 @@ const Footer = ({location}) => {
             <ul>
                 <li><a href="https://sites.google.com/baccc.net/apprenticeship/programs-in-colleges/#h.uliwsc8fq6g">Link to Bay Area Apprenticeship Programs</a></li>
                 <li><a href="https://district9.cwa-union.org/">Link to Communications Workers of America District 9 Website</a></li>
-                <li><a href="www.chabotcollege.edu">Link to Chabot Community College</a> </li>
+                <li><a href="http://chabotcollege.edu/">Link to Chabot Community College</a> </li>
                 <li><a href="https://www.foa.org/">Link to FOA</a></li>
                 <li><a href="https://www.dir.ca.gov/das/">Link to California Division of Apprenticeship Standards</a> </li>
                 <li><a href="https://www.dol.gov/eta">Link to U.S. Department of Labor (DOL)</a></li>
